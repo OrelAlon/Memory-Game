@@ -3,3 +3,74 @@
   padding: 0;
   margin: 0;
 }
+body {
+  height: 80vh;
+  /* width: 80vw; */
+}
+.hidden {
+  display: none;
+}
+.infoGame {
+  border: solid blue 2px;
+  height: 12vh;
+  width: 60vw;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.cardContainer {
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  /* margin: 10px; */
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 2px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.card:active {
+  transform: scale(0.93);
+  /* transition: transform 0.2s; */
+}
+.card.flip {
+  transform: rotateY(180deg);
+}
+img {
+  /* width: 100%; */
+  /* height: 100%; */
+  cursor: pointer;
+}
+.flip {
+  /* background-color: lightgreen; */
+}
+/* #eazyGame { */
+/* display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr); */
+/* } */
+.closeCard,
+.openCard {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 10px;
+  /* background: #1c7ccc; */
+}
+
+.closeCard {
+  closecard-visibility: hidden;
+}
+.openCard {
+  transform: rotateY(180deg);
+}
